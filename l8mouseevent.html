@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mouse Event</title>
+	<style type="text/css">
+			
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+
+		.box{
+			width: 300px;
+			height: 300px;
+			background: green;
+
+
+		}
+
+		.container{
+			width: 500px;
+			box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5) ;
+			padding: 20px;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="box"></div>
+	</div>
+
+	<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			// console.log('hi');
+
+			// mouseenter
+			// $('.container').mouseenter(function(){
+			// 	console.log('i am working with mouseenter');
+			// });
+
+			// mouseover(inc child elements)
+			// $('.container').mouseover(function(){
+			// 	console.log("i am working using mouseover");
+			// });
+
+
+
+			// mouseleave
+			// $('.container').mouseleave(function(){
+			// 	console.log("i am working using mouseleave");
+			// });
+
+			// mouseout(inc child elements)
+			// $('.container').mouseout(function(){
+			// 	console.log("i am working using mouseout");
+			// });
+
+
+			// hover(infunction,outfunction)
+			// $(".box").hover(function(){
+			// 	// for in
+			// 	$(this).css("background-color","violet")
+
+			// },function(){
+			// 	// for out
+			// 	$(this).css("background-color","steelblue")
+
+			// });
+
+
+			// $(".container").hover(function(){
+			// 	$(this).css("background-color","pink")
+			// });
+
+
+			// mousedown
+			$('.box').mousedown(function(){
+				console.log("i am working using mousedown");
+			});
+
+			// mouseup
+			$('.box').mouseup(function(){
+				console.log("i am working using mouseup");
+			});
+
+
+
+		});
+
+
+	</script>
+
+</body>
+</html>

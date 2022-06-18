@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input Event</title>
+    <style>
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 500px;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" class="form-control" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" class="form-control" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select name="country" id="country" class="form-control">
+                <option selected disabled>Choose a country</option>
+                <option value="mm">Myanmar</option>
+                <option value="th">Thailand</option>
+                <option value="indo">Indonesia</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" class="form-control" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="number" id="phone" name="phone" class="form-control" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+            <label for="nrc">NRC</label>
+            <input type="text" id="nrc" name="nrc" class-control autocomplete="off" />
+        </div>
+
+        <button id="submit"> Submit </button>
+
+    </form>
+</div>
+
+<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+    console.log("hay");
+
+    $(document).ready(function(){
+
+        console.log("hi");
+
+        //blur -- work when leaving from form box despite the way how we leave
+        // $("#firstname").blur(function(){
+        //     console.log("firstname is working by blur");
+        // });
+
+        //change
+
+            // $("#firstname").change(function(){
+            //     console.log('firstname is working by change');
+            // });
+
+            // $("lastname").focus(function(){
+            //  console.log('lastname is working by focus');
+            // });
+
+            // $("lastname").focusin(function(){
+            //  console.log('lastname is working by focus');
+            // });
+
+            // $("lastname").focusout(function(){
+            //  console.log('lastname is working by focus');
+            // });
+
+            // select()
+            // $("input").select(function(){
+            // 	console.log("you select to some text");
+            // });
+
+           	// change()
+           	$("select").change(function(){
+           		console.log('you changed to new function')
+           	});
+
+           	// keydown()
+           	var q = 0;
+           	$("#age").keydown(function(){
+           		console.log('age is working by keydown');
+           		// console.log(q++);
+           		console.log(q+=1)
+           	});
+
+           	// keypress()
+           	var x = 1;
+           	$("#phone").keypress(function(){
+           		console.log('phone is working by keypress');
+           		console.log(x++);
+           	});
+
+           	// keyup()
+           	var y = 0;
+           	$("#nrc").keyup(function(){
+           		console.log('nrc is working by keyup');
+           		console.log( y += 1);
+           	});
+
+
+           	$("form").submit(function(e){
+           		console.log("Submitted to DB");
+           		e.preventDefault(); //javascript code
+
+           	});
+           	
+
+
+    })
+
+</script>
+
+
+</body>
+</html>
+
+<!-- 17IE -->
