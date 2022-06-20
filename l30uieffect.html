@@ -82,6 +82,15 @@
 	<div class="control">
 		<button type="button" id="shakebtn">Shake</button>
 		<button type="button" id="bouncebtn">Bounce</button>
+		<button type="button" id="blindbtn">Blind</button>
+		<button type="button" id="clipbtn">Clip</button>
+		<button type="button" id="dropbtn">Drop</button>
+		<button type="button" id="explodebtn">Explode</button>
+		<button type="button" id="fadebtn">Fade</button>
+		<button type="button" id="foldbtn">Fold</button>
+		<button type="button" id="highlightbtn">Highlight</button>
+		<button type="button" id="puffbtn">Puff</button>
+		<button type="button" id="pulsatebtn">Pulsate</button>
 	</div>
 
 
@@ -130,6 +139,98 @@
 					distance:200
 				},2000)
 			});
+
+			// blind
+			$("#blindbtn").click(function(){
+				// $(".square3").effect("blind",1000);
+
+				$(".square3").effect("blind",{
+					// direction:"left"
+					direction:"right",
+					// direction:"up"
+					// direction:"down"
+				},1000);
+
+			});
+
+			// clip
+			$("#clipbtn").click(function(){
+				// $(".square4").effect("clip",1000);
+
+				// $(".square4").effect("clip","fast");
+
+				$(".square4").effect("clip","slow");
+
+			});
+			
+			// drop
+			$("#dropbtn").click(function(){
+				// $(".square5").effect("drop",1000);
+
+				$(".square5").effect("drop",{
+					// direction:"left" //default
+					// direction:"right",
+					// direction:"up"
+					direction:"down"
+				},2000);
+
+			});
+
+			// explode
+			$("#explodebtn").click(function(){
+				// $(".square6").effect("explode",1000);
+
+				// $(".square6").effect("explode","fast");
+
+				$(".square6").effect("explode","slow");
+			});
+
+			// fade
+			$("#fadebtn").click(function(){
+				// $(".square7").effect("fade",1000);
+
+				// $(".square7").effect("fade","fast");
+
+				$(".square7").effect("fade","slow");
+			});
+
+			// fold
+			$("#foldbtn").click(function(){
+				// $(".square8").effect("fold",1000);
+
+				// $(".square8").effect("fold","fast");
+
+				$(".square8").effect("fold","slow");
+			});
+
+			// highlight
+			$("#highlightbtn").click(function(){
+				// $(".square9").effect("highlight",1000);
+
+				$(".square9").effect("highlight",{
+					color:"red"
+				},1000);
+			});
+
+			// puff
+			$("#puffbtn").click(function(){
+				// $(".square10").effect("puff",1000);
+
+				// $(".square10").effect("puff",slow);
+
+				$(".square10").effect("puff",fast);
+			});
+
+			// pulsate
+			$("#pulsatebtn").click(function(){
+				// $(".square11").effect("pulsate",1000);
+
+				$(".square11").effect("pulsate",{
+					times:10
+				},2000);
+			});
+
+
 
 		});	
 
